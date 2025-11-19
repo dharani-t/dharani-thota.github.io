@@ -1,0 +1,55 @@
+--- contact.html ---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact — Dharani Thota</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="light">
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1>Dharani Thota</h1>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+        <button id="theme-toggle">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main">
+    <h2>Contact</h2>
+    <p>If you'd like to reach out for a role or to collaborate, email me at <strong>your.email@example.com</strong> or find me on LinkedIn: <strong>linkedin.com/in/yourprofile</strong>.</p>
+
+    <h3>Quick contact form</h3>
+    <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
+      <label>Name<input type="text" name="name" required></label>
+      <label>Email<input type="email" name="email" required></label>
+      <label>Message<textarea name="message" rows="5" required></textarea></label>
+      <button class="btn" type="submit">Send</button>
+    </form>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Made by Dharani • <a href="https://github.com/">GitHub</a></p>
+    </div>
+  </footer>
+
+  <script>
+    const toggleBtns = document.querySelectorAll('#theme-toggle');
+    toggleBtns.forEach(b=>b.addEventListener('click', ()=>{
+      const current = document.body.className === 'light' ? 'dark' : 'light';
+      document.body.className = current; localStorage.setItem('theme', current);
+    }));
+    const saved = localStorage.getItem('theme'); if(saved) document.body.className = saved;
+  </script>
+</body>
+</html>
