@@ -1,0 +1,77 @@
+--- projects.html ---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Projects — Dharani Thota</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="light">
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1>Dharani Thota</h1>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+        <button id="theme-toggle">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main">
+    <h2>Projects</h2>
+
+    <section id="ecommerce" class="project">
+      <h3>E-commerce Sales Dashboard</h3>
+      <p><strong>Tools:</strong> Power BI, Power Query, Excel</p>
+      <p><strong>Summary:</strong> Built KPIs and an interactive dashboard that highlights revenue trends, best selling products and category performance. Cleansed raw transactional data, built relationships, and designed visuals for stakeholder decision-making.</p>
+      <p><strong>What I did</strong>: Data cleaning in Power Query, model relationships, DAX measures, visuals, story-telling and insights.</p>
+      <p><strong>Key results:</strong> Identified top 10 products driving 45% of revenue; recommended promotions for medium-margin categories.</p>
+      <p><a href="https://github.com/your-username/Ecommerce-Sales-Dashboard">View repository on GitHub</a></p>
+    </section>
+
+    <section id="pizza" class="project">
+      <h3>Pizza Sales End-to-End Analysis</h3>
+      <p><strong>Tools:</strong> Python (Pandas, Matplotlib), SQL, Power BI</p>
+      <p><strong>Summary:</strong> End-to-end analysis of pizza orders. Cleaned and transformed dataset, ran exploratory analysis in Python, wrote SQL queries for aggregated metrics, and built a Power BI dashboard with KPIs and visuals.</p>
+      <p><a href="https://github.com/your-username/Pizza-Sales-Analysis">View repository on GitHub</a></p>
+    </section>
+
+    <section id="honey" class="project">
+      <h3>Honey Production Time-Series Forecast</h3>
+      <p><strong>Tools:</strong> Python (Pandas, Prophet/ARIMA), Jupyter Notebook</p>
+      <p><strong>Summary:</strong> Performed time-series decomposition, seasonal analysis, and forecasting to predict honey production. Generated visualizations and evaluation metrics.</p>
+      <p><a href="https://github.com/your-username/Honey-Production-TimeSeries">View repository on GitHub</a></p>
+    </section>
+
+    <section id="credit" class="project">
+      <h3>Credit Card Delinquency Prediction (Tata iQ)</h3>
+      <p><strong>Tools:</strong> Python (scikit-learn), feature engineering, model validation</p>
+      <p><strong>Summary:</strong> Built a classification model to predict delinquency risk. Performed feature engineering, handled class imbalance, and generated business recommendations to reduce delinquency rates.</p>
+      <p><a href="https://github.com/your-username/Credit-Card-Delinquency-ML">View repository on GitHub</a></p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Made by Dharani • <a href="https://github.com/">GitHub</a></p>
+    </div>
+  </footer>
+
+  <script>
+    const toggleBtns = document.querySelectorAll('#theme-toggle');
+    toggleBtns.forEach(b=>b.addEventListener('click', ()=>{
+      const current = document.body.className === 'light' ? 'dark' : 'light';
+      document.body.className = current;
+      localStorage.setItem('theme', current);
+    }));
+    const saved = localStorage.getItem('theme'); if(saved) document.body.className = saved;
+  </script>
+</body>
+</html>
