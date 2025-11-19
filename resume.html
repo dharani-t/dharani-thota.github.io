@@ -1,0 +1,82 @@
+--- resume.html ---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Resume — Dharani Thota</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="light">
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1>Dharani Thota</h1>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+        <button id="theme-toggle">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main resume-page">
+    <section class="resume-header">
+      <h2>Dharani Thota</h2>
+      <p>Data Analyst • Power BI • Python • SQL</p>
+      <p>Email: your.email@example.com • LinkedIn: linkedin.com/in/yourprofile</p>
+    </section>
+
+    <section>
+      <h3>Summary</h3>
+      <p>Entry-level Data Analyst with experience in Power BI, Python, and SQL. Completed end-to-end projects including dashboards, forecasting, and predictive modelling. Strong at translating business problems into analytics solutions.</p>
+    </section>
+
+    <section>
+      <h3>Education</h3>
+      <p>Postgraduate Diploma — University (Year)</p>
+      <p>Bachelor's Degree — University (Year)</p>
+    </section>
+
+    <section>
+      <h3>Technical Skills</h3>
+      <ul>
+        <li>Power BI, Power Query, DAX</li>
+        <li>Python (Pandas, scikit-learn, Prophet)</li>
+        <li>SQL, Excel</li>
+        <li>Git & GitHub</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Projects (short bullets)</h3>
+      <ul>
+        <li>E-commerce Sales Dashboard — Built KPIs and interactive Power BI dashboard to analyze sales trends and product performance.</li>
+        <li>Pizza Sales Analysis — End-to-end analysis using Python, SQL and Power BI to identify top products and peak hours.</li>
+        <li>Honey Production Forecast — Time-series forecasting and seasonal analysis to predict production.</li>
+        <li>Credit Card Delinquency ML — Classification model to predict delinquency risk and recommend targeted interventions.</li>
+      </ul>
+    </section>
+
+    <p class="download"><a class="btn" href="assets/Dharani_Resume.pdf">Download PDF</a></p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Made by Dharani • <a href="https://github.com/">GitHub</a></p>
+    </div>
+  </footer>
+
+  <script>
+    const toggleBtns = document.querySelectorAll('#theme-toggle');
+    toggleBtns.forEach(b=>b.addEventListener('click', ()=>{
+      const current = document.body.className === 'light' ? 'dark' : 'light';
+      document.body.className = current; localStorage.setItem('theme', current);
+    }));
+    const saved = localStorage.getItem('theme'); if(saved) document.body.className = saved;
+  </script>
+</body>
+</html>
